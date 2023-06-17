@@ -31,7 +31,7 @@ export class ByCapitalPageComponent implements OnInit {
   searchByCapital( termino:string ):void {
     this.isLoading = true;
     this.countriesServ.searchCapital( termino )
-      .subscribe( countries => {
+      .subscribe( (countries:Country[]) => {
         this.countries = countries;
         this.isLoading = false;
       } );
